@@ -1,3 +1,7 @@
 export async function onRequest() {
-  return new Response("Hello world");
+  const url = new URL(
+    "https://www.ortusclub.com/cloudflare-developers-workershop-san-jose"
+  );
+
+  return fetch(url);
 }
