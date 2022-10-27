@@ -12,11 +12,5 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   url.pathname = "/foo";
 
-  return env.ASSETS.fetch(
-    new Request(url, {
-      headers: {
-        Accept: "text/html",
-      },
-    })
-  );
+  return new Response("ok");
 }
